@@ -1,0 +1,22 @@
+{
+  "name": "platzicursos",
+  "version": "1.0.0",
+  "description": "Primera página creada utilizando el framework VueJS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JuanesGalvis/FirstPage_VueJS.git"
+  },
+  "keywords": [
+    "VueJS"
+  ],
+  "author": "Juan Galvis <juangalvis.sh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuanesGalvis/FirstPage_VueJS/issues"
+  },
+  "homepage": "https://github.com/JuanesGalvis/FirstPage_VueJS#readme"
+}

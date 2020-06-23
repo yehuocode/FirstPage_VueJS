@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlatziList 💚</title>
+    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png" type="image/x-icon">
+    <meta name="description" content="Reto para el curso básico de VueJS en Platzi">
+</head>
+<body>
+    
+    <div id="app">
+      <div class="Logo">
+        <img src="https://static.platzi.com/mf-landings/image/isotipoPlatzi-442ccc1186a9806e18c9889cc301ffe1.png" alt="Logo1">
+        <img src="https://static.platzi.com/mf-landings/image/logotipo-platzi-768799552e5f26369e21a807b8a533f7.png" alt="Logo2">
+      </div>
+        <h1>
+          Mis Cursos de Platzi 💚
+        </h1>
+          <p>
+            <input type="text" placeholder="Titulo del curso" v-model="title"/>
+          </p>
+          <p>
+            <input type="number" placeholder="Horas" v-model="time"/>
+          </p>
+          <p>
+            <button @click="addCourse">Guardar Curso</button>
+          </p>
+        </fieldset>
+        <div>
+          <h3>Lista de Cursos</h3>
+          <p class="red" v-if=" courses.length <= 0 ">Aun no has realizado cursos</p>
+          <div>
+            <ol>
+                <li v-for="x in courses">
+                    {{ 'Completado el curso: ' + x[0] + ' en: ' + x[1] + ' horas' }}
+                </li>
+            <hr/>
+            <p v-if="totalTime == 0">
+              No he empezado a aprender 😔
+              <b>#NuncaParesDeAprender 💚</b>
+            </p>
+            <p v-else>
+                Llevo <strong>{{ totalTime }}</strong> horas aprendiendo en Platzi.
+                <b>#NuncaParesDeAprender 💚</b>
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+      <script src="./script.js"></script>
+      <link rel="stylesheet" href="./style.css">
+</body>
+</html>
